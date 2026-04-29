@@ -28,9 +28,12 @@
 <p>Welcome to UICF Chess Vidhyapeeth. Promoting chess excellence and structured training.</p>
 </main>
 
-<footer>
-<p>&copy; 2026 UICF Chess Vidhyapeeth | Developed by Big Infrastructures™</p>
-</footer>
-
+<script>
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
 </body>
 </html>
