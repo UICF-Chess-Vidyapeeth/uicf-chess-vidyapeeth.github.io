@@ -69,6 +69,16 @@ text-align: center;
 padding: 15px;
 }
 
+footer a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
 /* Mobile */
 
 @media (max-width: 768px) {
