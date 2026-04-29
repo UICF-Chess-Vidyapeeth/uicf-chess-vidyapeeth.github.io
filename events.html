@@ -19,15 +19,21 @@
 <div id="footer"></div>
 
 <script>
-function loadHTML(id, file) {
+function loadHTML(id, file, callback) {
 fetch(file)
 .then(response => response.text())
 .then(data => {
 document.getElementById(id).innerHTML = data;
+if (callback) callback();
 });
 }
 
-loadHTML("header", "/header.html");
+loadHTML("header", "/header.html", function() {
+window.toggleMenu = function() {
+document.getElementById("nav-menu").classList.toggle("active");
+};
+});
+
 loadHTML("footer", "/footer.html");
 </script>
 
