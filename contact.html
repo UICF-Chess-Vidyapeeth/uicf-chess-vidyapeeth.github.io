@@ -27,4 +27,20 @@
 <main>
 <h2>Contact</h2>
 <p>Email: uicfchessvidyapeeth@gmail.com</p>
+  
 </main>
+
+
+  <div id="footer"></div>
+
+<script>
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+  
+</body>
+</html>
