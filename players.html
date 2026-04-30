@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Players - UICF Chess Vidhyapeeth</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main>
+<h2>Player Levels</h2>
+<p>Select a level to view the player list.</p>
+
+<div class="levels">
+
+<h3>Level 1 - Zero knowledge of the Game</h3>
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizt0VFy7BvGo9Y4_BcbxMo3hqQZP0ZC0qewq90cP4vQRotIU9KRgSG4x-GDfa4jgmDrM1EOESbOq7/pubhtml?gid=443282744&single=true" target="_blank" class="btn">View List</a>
+
+<h3>Level 2 - Players don't make illegal moves</h3>
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizt0VFy7BvGo9Y4_BcbxMo3hqQZP0ZC0qewq90cP4vQRotIU9KRgSG4x-GDfa4jgmDrM1EOESbOq7/pubhtml?gid=1660533199&single=true" target="_blank" class="btn">View List</a>
+
+<h3>Level 3 - The Beginner</h3>
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizt0VFy7BvGo9Y4_BcbxMo3hqQZP0ZC0qewq90cP4vQRotIU9KRgSG4x-GDfa4jgmDrM1EOESbOq7/pubhtml?gid=306102072&single=true" target="_blank" class="btn">View List</a>
+
+<h3>Level 4 - 1400+</h3>
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizt0VFy7BvGo9Y4_BcbxMo3hqQZP0ZC0qewq90cP4vQRotIU9KRgSG4x-GDfa4jgmDrM1EOESbOq7/pubhtml?gid=388444506&single=true" target="_blank" class="btn">View List</a>
+
+<h3>Level 5 - 1600+</h3>
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizt0VFy7BvGo9Y4_BcbxMo3hqQZP0ZC0qewq90cP4vQRotIU9KRgSG4x-GDfa4jgmDrM1EOESbOq7/pubhtml?gid=1444422819&single=true" target="_blank" class="btn">View List</a>
+
+</div>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+function loadHTML(id, file, callback) {
+fetch(file)
+.then(response => response.text())
+.then(data => {
+document.getElementById(id).innerHTML = data;
+if (callback) callback();
+});
+}
+
+loadHTML("header", "/header.html", function() {
+window.toggleMenu = function() {
+document.getElementById("nav-menu").classList.toggle("active");
+};
+});
+
+loadHTML("footer", "/footer.html");
+</script>
+
+</body>
+</html>
